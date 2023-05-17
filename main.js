@@ -1,16 +1,24 @@
 $.getJSON('data.json', function(data) {
-  $.each(data, function(key, val) {
-    let card = `
-      <div class="card">
-        <img src="${val['Profile image URL']}" alt="${val['Name']}">
-        <h2>${val['Name']}</h2>
-        <p>${val['Screen name']}</p>
-        <p>${val['Twitter ID']}</p>
-        <p>${val['Location']}</p>
-        <p>${val['Biography']}</p>
-        <!-- Add more fields as required -->
-      </div>
-    `;
-    $('#grid').append(card);
+  $('#table').DataTable({
+    data: data,
+    columns: [
+      { data: 'Name' },
+      { data: 'Screen name' },
+      { data: 'Twitter ID' },
+      { data: 'Location' },
+      { data: 'Biography' },
+      { data: 'Created date' },  
+      { data: 'Followers' }, 
+      { data: 'Following' },
+      { data: 'Tweets' },  
+      { data: 'Favorites' },  
+      { data: 'Website' },  
+      { data: 'Time zone' },  
+      { data: 'Geo-enabled' },  
+      { data: 'Verified' },  
+      { data: 'Language' },  
+      { data: 'Protected' },  
+      { data: 'Profile image URL' },  
+    ]
   });
 });
