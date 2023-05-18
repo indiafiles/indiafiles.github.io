@@ -12,7 +12,7 @@ $.getJSON('data.json', function(data) {
       { data: 'Location', defaultContent: '', searchable: false, width: '10%' },
       { data: 'Verified', defaultContent: '', searchable: false, width: '5%' },
       { data: 'Followers', defaultContent: '', searchable: false, width: '5%' },
-      { data: 'Following', defaultContent: '', searchable: false, width: '5%' },
+      
       
     ],
     autoWidth: false // ensure that column widths are respected
